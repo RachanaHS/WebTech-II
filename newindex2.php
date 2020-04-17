@@ -32,7 +32,7 @@ include('includes/config.php');
 <?php include('includes/header.php');?>
 <div class="banner">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS - Tourism Management System</h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> Travel and Tourism </h1>
 	</div>
 </div>
 
@@ -45,7 +45,7 @@ include('includes/config.php');
 				<a href="offers.html"><i class="fa fa-usd"></i></a>
 			</div>
 			<div class="rup-rgt">
-				<h3>UP TO USD. 50 OFF</h3>
+				<h3>UP TO 50 OFF</h3>
 				<h4><a href="offers.html">TRAVEL SMART</a></h4>
 				
 			</div>
@@ -56,7 +56,7 @@ include('includes/config.php');
 				<a href="offers.html"><i class="fa fa-h-square"></i></a>
 			</div>
 			<div class="rup-rgt">
-				<h3>UP TO 70% OFF</h3>
+				<h3>UP TO 40% OFF</h3>
 				<h4><a href="offers.html">ON HOTELS ACROSS WORLD</a></h4>
 				
 			</div>
@@ -77,22 +77,10 @@ include('includes/config.php');
 	</div>
 </div>
 <!--- /rupes ---->
-
-
-
-
-<!---holiday---->
-<div class="container">
-	<div class="holiday">
-	
-
-
-
-	
-	<h3>Package List</h3>
+<h3>Top Holiday Places</h3>
 
 					
-<?php $sql = "SELECT * from tbltourpackages order by rand() limit 4";
+<?php $sql = "SELECT * from tbltourpackages limit 4";
 $query = $dbh->prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -107,14 +95,21 @@ foreach($results as $result)
 				</div>
 				<div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
 					<h4>Package Name: <?php echo htmlentities($result->PackageName);?></h4>
-					<h6>Package Type : <?php echo htmlentities($result->PackageType);?></h6>
-					<p><b>Package Location :</b> <?php echo htmlentities($result->PackageLocation);?></p>
-					<p><b>Features</b> <?php echo htmlentities($result->PackageFetures);?></p>
-				</div>
-				<div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
-					<h5>USD <?php echo htmlentities($result->PackagePrice);?></h5>
-					<a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId);?>" class="view">Details</a>
-				</div>
+					<h6>Price/person: <?php echo htmlentities($result->PackagePrice);?></h6>
+					<p><b>Features:</b> <?php echo htmlentities($result->PackageFetures);?></p>
+					<?php
+					if(($result->PackageName)=="Manali"){?>
+					<a href="manali/new1.php?pkgid=<?php echo htmlentities($result->PackageId);?>">Know More</a><?php } 
+					else if(($result->PackageName)=="Thailand"){?>
+						<a href="Thailand/thailand-hotels.php">Know More</a>
+					<?php }
+					else if(($result->PackageName)=="Kerala"){?>
+						<a href="Kerala/kerala-hotels.php">Know More</a>
+					<?php }
+					else if(($result->PackageName)=="Jaipur"){?>
+						<a href="3.php">Know More</a>
+					<?php } ?>
+			</div>
 				<div class="clearfix"></div>
 			</div>
 
@@ -125,6 +120,14 @@ foreach($results as $result)
 </div>
 			<div class="clearfix"></div>
 	</div>
+
+
+
+
+<!---holiday---->
+<div class="container">
+	<div class="holiday">
+	
 
 
 

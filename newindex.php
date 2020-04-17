@@ -7,6 +7,23 @@ include('includes/config.php');
 <html>
 <head>
 <title>TMS | Tourism Management System</title>
+<style>
+#outer
+{
+	font-size:30px;
+	height:50px;
+	border-top:5px solid black;
+	border-bottom:5px solid black;
+	border-left:transparent;
+	border-right:transparent;
+}
+#inner
+{
+	position:absolute;
+	white-space:nowrap;
+}
+</style>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -25,15 +42,68 @@ include('includes/config.php');
 <script src="js/wow.min.js"></script>
 	<script>
 		 new WOW().init();
+function init()
+{
+	obj=new News();
+	obj.divinner=document.getElementById("inner");
+	obj.divinner.style.left=window.innerWidth-5+"px";
+	obj.scroll();
+	setInterval(obj.getNews,5000);//5 seconds once
+}
+function News()
+{
+	this.getNews=function()
+	{
+		xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=obj.processNews;
+		xhr.open("GET","test17.php",true);
+		xhr.send();
+	}
+	this.processNews=function()
+	{
+		if(xhr.readyState==4 && xhr.status==200)
+		{
+			root=this.responseXML.documentElement;
+			item=root.getElementsByTagName("item")[0];
+			title=item.getElementsByTagName("title")[0];
+			link=item.getElementsByTagName("link")[0];
+			anchor=	document.createElement("a");
+			anchor.href=link.firstChild.nodeValue;
+			anchor.innerHTML=link.firstChild.nodeValue;
+			obj.divinner.innerHTML="";
+			obj.divinner.appendChild(anchor);
+		}
+	}
+	this.scroll=function()
+	{
+		if(obj.divinner.offsetLeft+obj.divinner.offsetWidth <2)
+		{
+			obj.divinner.style.left=window.innerWidth-5+"px";
+		}
+		else
+		{
+			obj.divinner.style.left=obj.divinner.offsetLeft-4+"px";
+		}
+		setTimeout(obj.scroll,30);
+	}
+}
 	</script>
 <!--//end-animate-->
 </head>
 <body>
+
+<body onload="init()">
 <?php include('includes/header.php');?>
 <div class="banner">
 	<div class="container">
-		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> TMS - Tourism Management System</h1>
+		<h1 class="wow zoomIn animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: zoomIn;"> Travel and Tourism </h1>
 	</div>
+</div>
+
+
+<body onload="init()">
+<div id="outer">
+<div id="inner">A TRAVEL ENTHUSIAST ?? GET SOME EXCITING NEWS HERE</div>
 </div>
 
 
@@ -42,34 +112,24 @@ include('includes/config.php');
 	<div class="rupes">
 		<div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
 			<div class="rup-left">
-				<a href="offers.html"><i class="fa fa-usd"></i></a>
+				<img src="chatbot.png" width="70" height="70">
+				<a href="chatbot.html"></a>
 			</div>
 			<div class="rup-rgt">
-				<h3>UP TO USD. 50 OFF</h3>
-				<h4><a href="offers.html">TRAVEL SMART</a></h4>
-				
-			</div>
+				<h3>NEED ANY SUGGESTIONS</h3>
+				<h4><a href="chatbot.html">CHAT WITH OUR BOT</a></h4>
 				<div class="clearfix"></div>
+			</div>
 		</div>
 		<div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
 			<div class="rup-left">
-				<a href="offers.html"><i class="fa fa-h-square"></i></a>
+				<img src="index.png" width="70" height="70">
+				<a href="offers.html"></a>
 			</div>
 			<div class="rup-rgt">
-				<h3>UP TO 70% OFF</h3>
-				<h4><a href="offers.html">ON HOTELS ACROSS WORLD</a></h4>
+				<h3>CHECK PLACES</h3>
+				<h4><a href="https://www.google.com/maps">GOOGLE MAPS</a></h4>
 				
-			</div>
-				<div class="clearfix"></div>
-		</div>
-		<div class="col-md-4 rupes-left wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-			<div class="rup-left">
-				<a href="offers.html"><i class="fa fa-mobile"></i></a>
-			</div>
-			<div class="rup-rgt">
-				<h3>FLAT USD. 50 OFF</h3>
-				<h4><a href="offers.html">US APP OFFER</a></h4>
-			
 			</div>
 				<div class="clearfix"></div>
 		</div>
@@ -77,22 +137,10 @@ include('includes/config.php');
 	</div>
 </div>
 <!--- /rupes ---->
-
-
-
-
-<!---holiday---->
-<div class="container">
-	<div class="holiday">
-	
-
-
-
-	
-	<h3>Package List</h3>
+<h3>Top Holiday Places</h3>
 
 					
-<?php $sql = "SELECT * from tbltourpackages order by rand() limit 4";
+<?php $sql = "SELECT * from tbltourpackages where PackageId in (12,7,8,11)";
 $query = $dbh->prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -107,14 +155,35 @@ foreach($results as $result)
 				</div>
 				<div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
 					<h4>Package Name: <?php echo htmlentities($result->PackageName);?></h4>
-					<h6>Package Type : <?php echo htmlentities($result->PackageType);?></h6>
-					<p><b>Package Location :</b> <?php echo htmlentities($result->PackageLocation);?></p>
-					<p><b>Features</b> <?php echo htmlentities($result->PackageFetures);?></p>
-				</div>
-				<div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
-					<h5>USD <?php echo htmlentities($result->PackagePrice);?></h5>
-					<a href="package-details.php?pkgid=<?php echo htmlentities($result->PackageId);?>" class="view">Details</a>
-				</div>
+					<h6>Price/person: <?php echo htmlentities($result->PackagePrice);?></h6>
+					<p><b>Features:</b> <?php echo htmlentities($result->PackageFetures);?></p>
+					<?php
+					if(($result->PackageName)=="Manali"){?>
+					<a href="manali/new1.php">Know More</a><?php } 
+					else if(($result->PackageName)=="Thailand"){?>
+						<a href="Thailand/thailand-hotels.php">Know More</a>
+					<?php }
+					else if(($result->PackageName)=="Kerala"){?>
+						<a href="Kerala/kerala-hotels.php">Know More</a>
+					<?php }
+					else if(($result->PackageName)=="Jaipur"){?>
+						<a href="3.php">Know More</a>
+					<?php } 
+					else if(($result->PackageName)=="Goa"){?>
+						<a href="Goa/goa-hotels.php">Know More</a>
+					<?php } 
+					else if(($result->PackageName)=="Andaman"){?>
+						<a href="ladakh/ladakh-hotels.php">Know More</a>
+					<?php } 
+					else if(($result->PackageName)=="Ladakh"){?>
+						<a href="ladakh/ladakh-hotels.php">Know More</a>
+					<?php } 
+					else if(($result->PackageName)=="Kashmir"){?>
+						<a href="ladakh/ladakh-hotels.php">Know More</a>
+					<?php } 
+					?>
+					
+			</div>
 				<div class="clearfix"></div>
 			</div>
 
@@ -125,6 +194,14 @@ foreach($results as $result)
 </div>
 			<div class="clearfix"></div>
 	</div>
+
+
+
+
+<!---holiday---->
+<div class="container">
+	<div class="holiday">
+	
 
 
 

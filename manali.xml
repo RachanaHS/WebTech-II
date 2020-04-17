@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+<channel>
+	<title>Variety Festival News</title>
+	<link>https://variety.com</link>
+	<description />
+	<lastBuildDate>Mon, 17 Feb 2020 03:42:47 +0000</lastBuildDate>
+	<language>en</language>
+	<ttl>3</ttl>
+	<generator>http://wordpress.com/</generator>
+
+
+
+	
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/VarietyFestivalNews" /><feedburner:info xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" uri="varietyfestivalnews" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://variety.com/?pushpress=hub" />
+	
+		<item>
+		<title>HAMPTA PASS</title>
+		<link>https://www.google.com/maps/place/Hamta+Pass/@32.2703871,77.3378276,15z/data=!3m1!4b1!4m5!3m4!1s0x39047acf81706967:0xe51e3ff6b7c1fd0d!8m2!3d32.2703698!4d77.3465824</link>
+		<description> </description>
+			
+		</item>
+
+
+		<item>
+		<title>DIO TIBBA</title>
+		<link>https://www.google.com/maps/place/Deo+Tibba/@32.1975309,77.3737048,15z/data=!3m1!4b1!4m5!3m4!1s0x39046f6094c52d07:0xf380a23b4a460e16!8m2!3d32.1975135!4d77.3824596</link>
+		<description></description>
+			
+		</item>
+
+
+		<item>
+		<title>KASOL</title>
+		<link>https://www.google.com/maps/place/Kasol,+Himachal+Pradesh+175105/@32.0101458,77.3125301,15.75z/data=!4m5!3m4!1s0x39045c4474aa31e9:0xf112d2e32b47949d!8m2!3d32.0099986!4d77.3149625</link>
+		<description></description>
+			
+		</item>
+
+
+
+		<item>
+		<title>RAHALA WATERFALLS</title>
+		<link>https://www.google.com/maps/place/Rahala+Waterfalls/@32.3363763,77.2157095,16.5z/data=!4m5!3m4!1s0x39047e7544f559a1:0x781944ba28d7b61a!8m2!3d32.3363624!4d77.2183648</link>
+		<description></description>
+			
+		</item>
+
+
+
+		<item>
+		<title>BHRIGU LAKE</title>
+		<link>https://www.google.com/maps/place/Bhrigu+Lake/@32.2930831,77.2403562,17z/data=!4m5!3m4!1s0x39047cff88585203:0x4a555ceed3dc0aa!8m2!3d32.2933619!4d77.242491</link>
+		<description> </description>
+			
+		</item>
+
+
+
+	
+	</channel>
+</rss>

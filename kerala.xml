@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+<channel>
+	<title>Variety Festival News</title>
+	<link>https://variety.com</link>
+	<description />
+	<lastBuildDate>Mon, 17 Feb 2020 03:42:47 +0000</lastBuildDate>
+	<language>en</language>
+	<ttl>3</ttl>
+	<generator>http://wordpress.com/</generator>
+
+
+
+	
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/VarietyFestivalNews" /><feedburner:info xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" uri="varietyfestivalnews" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://variety.com/?pushpress=hub" />
+	
+		<item>
+		<title>ALLEPEY</title>
+		<link>https://www.google.com/maps/place/Alappuzha,+Kerala/@9.501199,76.2720653,12z/data=!3m1!4b1!4m5!3m4!1s0x3b0884f1aa296b61:0xb84764552c41f85a!8m2!3d9.4980667!4d76.3388484</link>
+		<description> </description>
+			
+		</item>
+
+
+		<item>
+		<title>WAYANAD</title>
+		<link>https://www.google.com/maps/place/Wayanad,+Kerala/@11.7147968,75.8289889,10z/data=!3m1!4b1!4m5!3m4!1s0x3ba60cf91a9c5f0d:0x71dd4da2e1d3e46f!8m2!3d11.6853575!4d76.1319953</link>
+		<description></description>
+			
+		</item>
+
+
+		<item>
+		<title>MUNNAR</title>
+		<link>hhttps://www.google.com/maps/place/Munnar,+Kerala+685612/@9.674705,73.4378352,7z/data=!4m5!3m4!1s0x3b0799794d099a6d:0x63250e5553c7e0c!8m2!3d10.0889333!4d77.0595248</link>
+		<description> </description>
+			
+		</item>
+
+
+
+		<item>
+		<title>KOVALAM</title>
+		<link>https://www.google.com/maps/place/Kovalam,+Kerala/@8.4005679,76.9623138,14z/data=!3m1!4b1!4m5!3m4!1s0x3b05a5090a19ec65:0xb67f315bc0b762ac!8m2!3d8.3988128!4d76.9820149</link>
+		<description></description>
+			
+		</item>
+
+
+
+		<item>
+		<title>VAGAMON</title>
+		<link>https://www.google.com/maps/place/Vagamon,+Kerala/@9.6729284,76.8859933,14z/data=!3m1!4b1!4m5!3m4!1s0x3b07b486067afccb:0xe78789cc4d9eabb9!8m2!3d9.6861814!4d76.9052294</link>
+		<description> </description>
+			
+		</item>
+
+
+
+	
+	</channel>
+</rss>
