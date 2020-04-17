@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+<channel>
+	<title>Variety Festival News</title>
+	<link>https://variety.com</link>
+	<description />
+	<lastBuildDate>Mon, 17 Feb 2020 03:42:47 +0000</lastBuildDate>
+	<language>en</language>
+	<ttl>3</ttl>
+	<generator>http://wordpress.com/</generator>
+
+
+
+	
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/VarietyFestivalNews" /><feedburner:info xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" uri="varietyfestivalnews" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://variety.com/?pushpress=hub" />
+	
+		<item>
+		<title>PANGONG LAKE</title>
+		<link>https://www.google.com/maps/place/Pangong+Tso/@33.7883615,78.6298637,10.5z/data=!4m5!3m4!1s0x39002d69b6082a97:0xb7ba17e3c8c016a9!8m2!3d33.7595131!4d78.6674404</link>
+		<description> </description>
+			
+		</item>
+
+
+		<item>
+		<title>ZANSKAR VALLEY</title>
+		<link>https://www.google.com/maps/place/Zanskar+194302/@33.5625791,76.9790002,15z/data=!3m1!4b1!4m5!3m4!1s0x390291f2ae1b57bb:0x736eba6f94fd593a!8m2!3d33.562562!4d76.987755</link>
+		<description></description>
+			
+		</item>
+
+
+		<item>
+		<title>NUBRA VALLEY</title>
+		<link>https://www.google.com/maps/place/Nubra+Valley/@34.6863314,77.5585332,15z/data=!3m1!4b1!4m5!3m4!1s0x38fc367354176591:0x8bc4556bab23cae9!8m2!3d34.6863146!4d77.567288</link>
+		<description></description>
+			
+		</item>
+
+
+
+		<item>
+		<title>SHANTI STUPA </title>
+		<link>https://www.google.com/maps/place/Shanti+Stupa/@34.173624,77.5728101,17z/data=!3m1!4b1!4m5!3m4!1s0x38fdeb25362964e7:0xc90661126729dda8!8m2!3d34.1736196!4d77.5749988</link>
+		<description> </description>
+			
+		</item>
+
+
+
+		<item>
+		<title>ROYAL LEH PALACE</title>
+		<link>https://www.google.com/maps/place/Leh+Palace/@34.1600486,77.5774198,16z/data=!4m8!1m2!2m1!1sRoyal+Leh+Palace!3m4!1s0x38fdeb150c993295:0xc41a8d83a5a327e6!8m2!3d34.1659783!4d77.5865732</link>
+		<description></description>
+			
+		</item>
+
+
+
+	
+	</channel>
+</rss>

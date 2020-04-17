@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to make a BUTTON element with text.</p>
+
+
+
+<script>
+function myFunction() {
+  var txt=document.getElementById("fname").value;
+  var btn = document.createElement("p");
+  btn.innerHTML = txt;
+  document.body.appendChild(btn);
+}
+</script>
+<body>
+<input type="text" id="fname" name="fname"><br><br>
+<img src="http://localhost/tms/2.jpg"></img>
+<input type="submit" value="Submit" onclick="myFunction()">
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<title>Multi Stage Download</title>
+
+<script>
+
+var xhr=new XMLHttpRequest();
+var file;
+var n=0;
+var n1=0;
+function getcontent()
+{
+	xhr.onreadystatechange=showContent;
+	xhr.open("GET","descri.txt",true);
+	xhr.send();
+}
+function showContent()
+{
+	if(xhr.readyState==4 && xhr.status==200)
+	{
+	var res=xhr.responseText;
+	var resArr=res.split(";");
+	document.getElementById("descri").innerHTML=resArr[0];
+	document.getElementById("img").innerHTML=resArr[1];
+	document.getElementById("imgdes").innerHTML=resArr[1];
+	
+setTimeout(getPic,1000)
+	}
+}
+function getPic()
+{
+n=n+1;
+if(n<=4)
+{
+        
+	xhr.onreadystatechange=showPic;
+	xhr.open("GET","content.php?count="+n+"&flag=1",true);
+	xhr.send();
+}
+}
+function showPic()
+{
+	if(xhr.readyState==4 && xhr.status==200)
+	{
+	document.getElementById("img").innerHTML=xhr.responseText;
+	setTimeout(getLinks,1000);
+	console.log(xhr.readyState);
+	}
+}	
+function getLinks()
+{
+n1=n1+1;
+if(n1<=4)
+{
+        
+	xhr.onreadystatechange=showLinks;
+	xhr.open("GET","content.php?count="+n+"&flag=2",true);
+	xhr.send();
+}
+}
+function showLinks()
+{
+	if(xhr.readyState==4 && xhr.status==200)
+	{
+	document.getElementById("imgdes").innerHTML=xhr.responseText;
+	setTimeout(getPic,1000);
+	console.log(xhr.readyState);
+	}
+}	
+	
+</script>
+</head >
+<body onload = "getcontent()">
+<div class="content" id="descri"></div>
+<br>
+<div class="content" id="img"></div><br>
+<div class="content" id="imgdes"></div>
+</body>
+</html>

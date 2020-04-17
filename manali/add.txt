@@ -1,0 +1,112 @@
+<body>
+
+<div class="header">
+  <h1>PLACES YOU WILL ENJOY NEAR BY</h1>
+</div>
+
+<style>
+
+/* Header/Logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+</style>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS Feed</title>
+    <style>
+        .rssitem{
+            border: 1px solid black;
+            padding: 20px;
+	    margin: 0 0 20px 0;
+            background: #fff;
+            border-left: 4px solid #dd3d36;
+            -webkit-box-shadow: 5px 10px #888888;
+             box-shadow: 5px 10px #888888;
+        }
+        .rssTitle{
+            text-decoration: underline solid;
+            font-size: 30px;
+	    font-weight:1000;
+            color: violet ;
+        }
+        
+    </style>
+</head>
+<body onload="getRssFeed()">
+    <div id="divRss">
+
+    </div>
+    
+    <script>
+        var ttl = 2;
+        
+            var xml = null;
+            getRssFeed =  function()
+            {
+
+                console.log("called TTL: "+ ttl);
+                var divRss = document.getElementById("divRss");
+                divRss.innerHTML = "";
+                this.xml = new XMLHttpRequest();
+                this.xml.open("GET", "proxyServer.php", true);
+                this.xml.onreadystatechange = this.displayRssFeed;
+                this.xml.send();
+            }
+
+            function readMore(i)
+            {
+                console.log(i);
+                console.log("i have been called");
+                var desItem = document.getElementById("item"+i);
+                desItem.innerHTML = localStorage.getItem("item"+i);
+                var anchorItem = document.getElementById("anchor"+i);
+                anchorItem.style.display="none";
+            }
+
+            displayRssFeed = function()
+            {
+                var divRss = document.getElementById("divRss");
+                if(this.readyState == 4 && this.status == 200)
+                {
+                    var rootRss = this.responseXML.documentElement;
+                     ttl = parseInt(rootRss.getElementsByTagName("ttl")[0].innerHTML);
+
+                    var rssItems = rootRss.getElementsByTagName("item");
+          
+                    for(var i=0; i<rssItems.length; ++i)
+                    {
+                        item = rssItems[i];
+                        title = item.getElementsByTagName("title")[0].innerHTML;
+                        description = item.getElementsByTagName("description")[0].innerHTML;
+                        link = item.getElementsByTagName("link")[0].innerHTML;
+                        console.log(link);
+                        var divItem = document.createElement("div");
+                        var divTitle = document.createElement("a");
+                        divTitle.href = link;
+                        divTitle.innerHTML = title;
+                        var divDescription = document.createElement("p");
+                        divDescription.innerHTML = description;
+                        divDescription.id = "item"+i;
+                        divItem.className = "rssitem";
+                        divTitle.className = "rssTitle";
+                        divItem.appendChild(divTitle);
+                        divItem.appendChild(divDescription);
+                        divRss.appendChild(divItem);
+                        divRss.innerHTML+="<br>";
+                    }
+                }
+            }
+        
+    </script>
+</body>
+

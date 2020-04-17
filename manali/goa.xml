@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+<channel>
+	<title>Variety Festival News</title>
+	<link>https://variety.com</link>
+	<description />
+	<lastBuildDate>Mon, 17 Feb 2020 03:42:47 +0000</lastBuildDate>
+	<language>en</language>
+	<ttl>3</ttl>
+	<generator>http://wordpress.com/</generator>
+
+
+
+	
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/VarietyFestivalNews" /><feedburner:info xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" uri="varietyfestivalnews" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://variety.com/?pushpress=hub" />
+	
+		<item>
+		<title> BONDLA WILDLIFE SANCTUARY</title>
+		<link>https://www.google.com/maps/place/Bondla+Wildlife+Sanctuary/@15.4401156,74.1041889,17z/data=!3m1!4b1!4m5!3m4!1s0x3bbfa4566f7c32d5:0xc4ee76bccbbe058e!8m2!3d15.4401104!4d74.1063776</link>
+		<description></description>
+			
+		</item>
+
+
+		<item>
+		<title>AMBOLI</title>
+		<link>https://www.google.com/maps/place/Amboli,+Maharashtra+416510/@15.9663183,73.9995574,14.5z/data=!4m5!3m4!1s0x3bc077a18e5891ab:0x37b84c05e0a2123f!8m2!3d15.9647156!4d74.0035709</link>
+		<description></description>
+			
+		</item>
+
+
+		<item>
+		<title>KARWAR</title>
+		<link>https://www.google.com/maps/place/Karwar,+Karnataka/@14.8211753,74.1249702,14z/data=!3m1!4b1!4m5!3m4!1s0x3bbe60ce1a0140d7:0x3ceab1e851eb586a!8m2!3d14.8184812!4d74.1416127</link>
+		<description> </description>
+			
+		</item>
+
+
+
+		<item>
+		<title>DANDELI</title>
+		<link>https://www.google.com/maps/place/Old+Dandeli,+Dandeli,+Karnataka+581325/@15.2361393,74.6085271,15z/data=!3m1!4b1!4m5!3m4!1s0x3bbf2013bd84cb99:0x44a7efeb332459ef!8m2!3d15.2361191!4d74.6172819</link>
+		<description> </description>
+			
+		</item>
+
+
+
+		<item>
+		<title>DEVBAGH</title>
+		<link>https://www.google.com/maps/place/Devbagh+Beach/@15.4027213,73.2565613,9z/data=!4m8!1m2!2m1!1sDevbagh!3m4!1s0x3bbe5df77197a481:0x721db2535dced58f!8m2!3d14.8480733!4d74.1112319</link>
+		<description></description>
+			
+		</item>
+
+
+
+	
+	</channel>
+</rss>
